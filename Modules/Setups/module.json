@@ -1,0 +1,13 @@
+{
+    "name": "Setups",
+    "alias": "setups",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\Setups\\Providers\\SetupsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
