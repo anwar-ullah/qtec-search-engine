@@ -4,7 +4,8 @@ $links = explode('/',this_url());
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     
     <a href="{{url('dashboard')}}" class="brand-link">
-      	
+      	<img src="{{ url('system-images/logos/'.systemInformation()->logo) }}" class="img img-fluid" style="height: 40px;">
+      	&nbsp;<strong>{{ systemInformation()->name }}</strong>
 	</a>
 	
     <div class="sidebar half-a-second">

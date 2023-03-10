@@ -1,0 +1,13 @@
+{
+    "name": "SearchEngine",
+    "alias": "searchengine",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\SearchEngine\\Providers\\SearchEngineServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

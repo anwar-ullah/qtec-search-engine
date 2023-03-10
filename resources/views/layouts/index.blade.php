@@ -397,10 +397,14 @@
 								})
 								.done(function(response) {
 									if(response.success){
-										$('#tr-'+id).fadeOut();
 										notify('Data has been deleted','success');
-										playTone('success');
+										if($('.datatable-serverside').attr('class')){
+											reloadDatatable();
 										}else{
+											$('#tr-'+id).fadeOut();
+											playTone('success');
+										}
+									}else{
 										notify('Something went wrong!','danger');
 										playTone('danger');
 									}

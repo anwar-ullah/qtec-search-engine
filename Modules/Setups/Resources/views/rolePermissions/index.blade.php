@@ -33,10 +33,10 @@
         </form>
     </div>
 </div>
+
+<script src="{{ asset('lte') }}/plugins/jquery/jquery.min.js"></script>
 <script type="text/javascript">
-    $(document).ready(function() {
-        getPermissions();
-    });
+    getPermissions();
     
     function getPermissions(){
         $('#permission-view').html('<div class="col-md-4 offset-md-4"><h3><strong>Please wait...</strong></h3></div>');

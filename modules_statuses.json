@@ -1,5 +1,6 @@
 {
     "Setups": true,
     "Dashboard": true,
-    "Lead": true
+    "Lead": true,
+    "SearchEngine": true
 }

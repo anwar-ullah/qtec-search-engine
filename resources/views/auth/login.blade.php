@@ -8,14 +8,16 @@
 <!-- /.login-logo -->
 @include('errors.message')
   <div class="card">
-    <div class="card-header text-center" style="background: #a7276c">
-      <img src="{{ url('system-images/logos/'.systemInformation()->logo) }}" class="img img-fluid" style="width:33%">
+    <div class="card-header text-center bg-dark">
+      <img src="{{ url('system-images/logos/'.systemInformation()->logo) }}" class="img img-fluid" style="width:25%">
+      <br>
+      <h3>Login</h3>
     </div>
     <div class="card-body login-card-body">
       <form action="{{ route('login') }}" method="post">
         @csrf
         <div class="input-group mb-3">
-          <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"  placeholder="{{ __('email') }}" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+          <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"  placeholder="{{ __('Email') }}" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
           @error('email')
               <span class="invalid-feedback" role="alert">
@@ -53,19 +55,14 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block"  style="background: #a7276c;border:none">{{ __('Login') }}</button>
+            <button type="submit" class="btn btn-primary btn-block">{{ __('Login') }}</button>
           </div>
           <!-- /.col -->
         </div>
       </form>
 
-
-      {{-- <p class="mb-1">
-        @if (Route::has('password.request'))
-            <a class="btn btn-link" href="{{ route('password.request') }}">
-                {{ __('Forgot Password?') }}
-            </a>
-        @endif --}}
+      <p class="mb-1">
+        <a class="btn btn-link pl-0" href="{{ url('register') }}">{{ __('Dont have an account yet?') }}</a>
       </p>
     </div>
     <!-- /.login-card-body -->

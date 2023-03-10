@@ -59,7 +59,7 @@ class User extends Authenticatable
         return $this->hasOne(\App\Models\User::class, 'id', 'added_by');
     }
 
-    function leads(){
-        return $this->hasMany(\Modules\Lead\Entities\LeadHistory::class, 'user_id', 'id');
+    function searches(){
+        return $this->hasMany(\Modules\SearchEngine\Entities\Search::class);
     }
 }

@@ -10,4 +10,11 @@ body {
 .modal-backdrop {
 	background-color: transparent;
 }
+
+.search-text{
+    font-weight: bold !important;
+    font-style: italic !important;
+    text-decoration: underline !important;
+    color:  green !important; 
+}
 </style>

@@ -26,8 +26,7 @@ class AdminController extends Controller
     public function index()
     {
         $data = [
-            'admins' => User::where('admin', (in_array(auth()->user()->role_id, [1,2]) ? 1 : 0))
-                        ->get(),
+            'admins' => User::all(),
         ];
 
         return view('setups::admins.index',$data);
